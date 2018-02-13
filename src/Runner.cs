@@ -93,7 +93,7 @@ namespace De.Thekid.INotify
         {
             foreach (var token in tokens)
             {
-                var path = Path.Combine(source.Path, name);
+                var path = name == null ? source.Path : Path.Combine(source.Path, name);
                 switch (token[0])
                 {
                     case 'e':
